@@ -4,8 +4,10 @@ from dotenv import load_dotenv
 from groq import Groq
 
 load_dotenv()
-api_key=os.getenv("GROQ_API_KEY")
-client=Groq(api_key=api_key)
+
+
+api_key = st.secrets["GROQ_API_KEY"]
+client = Groq(api_key=api_key)
 
 st.set_page_config(page_title="PrepGenius AI",page_icon="🎓",layout="wide")
 st.title("🎓 PrepGenius AI – Intelligent Study Mentor Agent")
