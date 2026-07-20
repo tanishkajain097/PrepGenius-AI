@@ -60,4 +60,3 @@ if st.button("Generate"):
 
 st.markdown("---")
 st.markdown("**Tech Stack:** Python • Streamlit • Groq API • Llama 3.3")
-st.markdown("**Tech Stack:** Python • Streamlit • Gemini API")
