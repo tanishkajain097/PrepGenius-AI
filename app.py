@@ -6,7 +6,11 @@ from groq import Groq
 load_dotenv()
 
 
-api_key = st.secrets["GROQ_API_KEY"]
+try:
+    api_key = st.secrets["GROQ_API_KEY"]
+except:
+    api_key = os.getenv("GROQ_API_KEY")
+
 client = Groq(api_key=api_key)
 
 st.set_page_config(page_title="PrepGenius AI",page_icon="🎓",layout="wide")
@@ -44,7 +48,7 @@ if st.button("Generate"):
         with st.spinner("Thinking..."):
             try:
                 response = client.chat.completions.create(
-                    model="llama-3.3-70b-versatile",
+                    model="openai/gpt-oss-20b",
                     messages=[
                         {
                             "role": "user",
