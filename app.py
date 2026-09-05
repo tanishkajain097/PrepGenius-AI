@@ -65,4 +65,4 @@ if st.button("Generate"):
                 st.error(str(e))
 
 st.markdown("---")
-st.markdown("**Tech Stack:** Python • Streamlit • Groq API • Llama 3.3")
+st.markdown("**Tech Stack:** Python • Streamlit • GPT-OSS-20B")
